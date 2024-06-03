@@ -1,0 +1,158 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+nav {
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .mainMenu {
+    display: flex;
+    list-style: none;
+}
+
+nav .mainMenu li a {
+    display: inline-block;
+    padding: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    font-size: 1.5rem;
+}
+
+nav .mainMenu li a:hover {
+    background-color: burlywood;
+}
+
+nav .openMenu {
+    font-size: 2rem;
+    margin: 20px;
+    display: none;
+    cursor: pointer;
+}
+
+nav .mainMenu .closeMenu, .icons i {
+    font-size: 2rem;
+    display: none;
+    cursor: pointer;
+}
+
+nav .logo {
+    margin: 6px;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+.hero {
+    background: url('floating-burger-with-bacon-wooden-table-copy-space.jpg') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 150px 20px;
+}
+
+.hero h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    outline: 1px #000;
+    backdrop-filter: blur(5px);
+   
+}
+
+.hero p {
+    font-size: 1.5rem;
+    
+}
+
+.info {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.infoItem {
+    flex: 1;
+    margin: 0 20px;
+    text-align: center;
+}
+
+.infoItem h3 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.infoItem p {
+    font-size: 1rem;
+    color: #333;
+}
+
+footer {
+    background: #000;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+@media (max-width: 800px) {
+    nav .mainMenu {
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        z-index: 10;
+        flex-direction: column;
+        align-items: center;
+        background: #000;
+        transition: top 0.5s ease;
+        display: none;
+    }
+
+    nav .mainMenu.show {
+        display: flex;
+    }
+
+    nav .mainMenu .closeMenu {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 20px;
+    }
+
+    nav .openMenu {
+        display: block;
+    }
+
+    nav .mainMenu li a {
+        padding: 20px;
+        font-size: 1.2rem;
+    }
+
+    nav .mainMenu li a:hover {
+        background: none;
+        color: antiquewhite;
+        font-size: 1.6rem;
+    }
+
+    .info {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .infoItem {
+        margin-bottom: 20px;
+    }
+}
